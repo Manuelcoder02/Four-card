@@ -1,0 +1,143 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Poppins Black";
+  src: url(/assets/webfonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Poppins Light";
+  src: url(/assets/webfonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: "Poppins Thin";
+  src: url(/assets/webfonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url(/assets/webfonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins Regular";
+  src: url(/assets/webfonts/Poppins/Poppins-Regular.ttf);
+}
+body {
+  font-family: "Poppins Light";
+}
+img {
+  max-width: 100%;
+}
+#wrapper {
+  margin: 1em 0;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.head-text h1 {
+  font-size: 1.8em;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  font-family: "Poppins Thin";
+}
+.sub-head-text h1 {
+  font-size: 1.75em;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  font-family: "Poppins Bold";
+}
+.texts {
+  color: hsl(229, 6%, 66%);
+  font-family: "Poppins Regular";
+  text-align: center;
+  line-height: 1.6em;
+  padding: 1em 0;
+}
+/* SUPERVISION SECTION STYLING */
+section {
+  background-color: #fff;
+  box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+}
+section h1 {
+  color: hsl(234, 12%, 34%);
+  font-family: "Poppins Bold";
+}
+section p {
+  color: hsl(229, 6%, 66%);
+  font-family: "Poppins Regular";
+  line-height: 1.8em;
+  padding: 1em 0;
+}
+.image {
+  margin-left: auto;
+  width: 100px;
+}
+.supervisor {
+  border-top: 6px solid hsl(180, 62%, 55%);
+}
+.team-builder {
+  border-top: 6px solid hsl(0, 78%, 62%);
+}
+.karma {
+  border-top: 6px solid hsl(34, 97%, 64%);
+}
+.calculator {
+  border-top: 6px solid hsl(212, 86%, 64%);
+}
+
+/* ATTRIBUTION STYLING */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* FOR SCREENS BIGGER THAN 500px */
+@media (min-width: 500px) {
+  .texts {
+    padding: 1em 20em;
+    font-size: 0.9em;
+  }
+  .main-page {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 1em;
+    grid-template-areas:
+      "supervisor team calculator"
+      "supervisor karma calculator";
+    place-items: center;
+  }
+  .supervisor {
+    grid-area: supervisor;
+  }
+  .team-builder {
+    grid-area: team;
+  }
+  .calculator {
+    grid-area: calculator;
+  }
+  .karma {
+    grid-area: karma;
+  }
+  section {
+    padding: 1em 0;
+    width: 350px;
+    max-width: 500px;
+  }
+  section h1 {
+    font-size: 1.2em;
+  }
+  section p {
+    font-size: 0.9em;
+  }
+}
